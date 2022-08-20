@@ -43,7 +43,7 @@ public class Predicatore extends Persona {
 //		this.setPosizione(adiacenti.get(0));
 		List<Coordinate> possibili = new LinkedList<>();
 		for(Coordinate c:adiacenti) {
-			if(this.getAmbiente().getPersona(c)!=null || this.getAmbiente().getPersona(c).getClass()!=this.getClass()) {
+			if(this.getAmbiente().getPersona(c)!=null && this.getAmbiente().getPersona(c).getClass()!=this.getClass()) {
 				possibili.add(c);
 			} 
 		}
